@@ -25,3 +25,4 @@ monggose.connect(process.env.MONGODB_URI)
   })
 
   app.use('/users',require('./routes/usersRoute'))
+  app.use('/blogs',require('./routes/blogsRoute'))

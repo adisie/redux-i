@@ -15,6 +15,7 @@
     max-width: 900px;
     margin: 0 auto;
     padding: .35em;
+    overflow: hidden;
 }
 
 /* ----------------spinner-------------------- */
@@ -78,12 +79,13 @@ header nav ul li .link-btn {
 
 header .user-control button{
     background: transparent;
-    border: 2px solid black;
+    border: 2px solid rgba(0, 0, 0, 0.6);
     padding: .13em 1.5em;
-    border-radius: .15em;
+    border-radius: .25em;
     cursor: pointer;
     font-family: 'Times New Roman', Times, serif;
     text-transform: capitalize;
+    font-weight: bold;
 }
 
 header .user-control span {
@@ -171,4 +173,106 @@ header .user-control span {
     font-size: small;
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
+}
+
+/* -----------------------blogs---------------------------- */
+.blogs {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 38px;
+    padding: 0;
+}
+
+.blog-list {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.blog-list::-webkit-scrollbar {
+    width: 3px;
+}
+
+.blog-list:hover::-webkit-scrollbar-track {
+    background: rgb(174, 174, 174);
+    border-radius: 3px;
+}
+
+.blog-list:hover::-webkit-scrollbar-thumb {
+    background: rgb(118, 118, 118);
+    border-radius: 3px;
+}
+
+.blog {
+    background: rgb(199, 199, 199);
+    padding: .5em;
+    border-radius: .35em;
+    margin: .75em .3em;
+}
+
+.controlers {
+    width: 100%;
+    margin-top: .5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controlers .author-date span {
+    margin: 0 .5em;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: small;
+    font-style: italic;
+}
+
+.controlers .btns button {
+    margin: 0 .3em;
+    background: transparent;
+    border: none;
+    font-size: 1.3em;
+    cursor: pointer;
+    color: rgb(47, 47, 47);
+}
+
+.form-contaner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-contaner form {
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.form-contaner form textarea {
+    outline: none;
+    border: 2px solid rgb(184, 184, 184);
+    height: 28px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: .3em .75em;
+    border-radius: .35em;
+    background: whitesmoke;
+    max-height: 400px;
+    width: 250px;
+    resize: none;
+}
+
+.form-contaner form textarea::-webkit-scrollbar {
+    width: 0;
+}
+
+.form-contaner form button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin: 0 .25em;
+    font-size: 1.5em;
+    color: rgb(100, 100, 100);
 }

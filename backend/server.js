@@ -4,6 +4,9 @@ const express = require('express')
 const cors = require('cors')
 const cookieParser = require('cookie-parser')
 
+// middleware
+const protect = require('./middlewares/authMidleware')
+
 const app = express()
 
 // settings
@@ -25,4 +28,5 @@ monggose.connect(process.env.MONGODB_URI)
   })
 
   app.use('/users',require('./routes/usersRoute'))
+  app.use('/auth-check',protect,require('./routes/authCheckRoute'))
   app.use('/blogs',require('./routes/blogsRoute'))

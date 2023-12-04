@@ -1,9 +1,11 @@
-import React from 'react'
+
+// pages
+import Blogs from '../features/blogs/Blogs'
 
 const Dashboard = () => {
   return (
     <div className='home sub-con'>
-      <h3>Home</h3>
+      <Blogs />
     </div>
   )
 }
